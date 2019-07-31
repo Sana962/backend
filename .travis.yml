@@ -1,0 +1,5 @@
+language: python
+python:
+  - "3.6"
+install: "pip install gensim numpy"
+script: python -c "from DocSim import DocSim"
