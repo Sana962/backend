@@ -22,11 +22,11 @@ class FetchUrl:
         for i in ArryofUrlSimpleQuery1:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofSimpleSentencesQuery1.append(content.text)
-            print(ArryofUrlSimpleQuery1)
+        print(ArryofUrlSimpleQuery1)
         print('...................')
         print('...................')
         print('...................')
@@ -42,7 +42,7 @@ class FetchUrl:
         for i in ArryofUrlSimpleQuery2:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofSimpleSentencesQuery2.append(content.text)
@@ -64,7 +64,7 @@ class FetchUrl:
         for i in ArryofUrlSimpleQuery2:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofSimpleSentencesQuery3.append(content.text)
@@ -90,7 +90,7 @@ class FetchUrl:
         for i in ArryofUrlMediumQuery1:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofMediumSentencesQuery1.append(content.text)
@@ -108,7 +108,7 @@ class FetchUrl:
         for i in ArryofUrlMediumQuery2:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofMediumSentencesQuery2.append(content.text)
@@ -126,7 +126,7 @@ class FetchUrl:
         for i in ArryofUrlMediumQuery3:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofMediumSentencesQuery3.append(content.text)
@@ -145,7 +145,7 @@ class FetchUrl:
         for i in ArryofUrlMediumQuery4:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofMediumSentencesQuery4.append(content.text)
@@ -171,7 +171,7 @@ class FetchUrl:
         for i in ArryofUrlComplexQuery1:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofComplexSentencesQuery1.append(content.text)
@@ -189,7 +189,7 @@ class FetchUrl:
         for i in ArryofUrlComplexQuery2:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofComplexSentencesQuery2.append(content.text)
@@ -207,7 +207,7 @@ class FetchUrl:
         for i in ArryofUrlComplexQuery3:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofComplexSentencesQuery3.append(content.text)
@@ -226,7 +226,7 @@ class FetchUrl:
         for i in ArryofUrlComplexQuery4:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofComplexSentencesQuery4.append(content.text)
@@ -253,7 +253,7 @@ class FetchUrl:
         for i in ArryofUrlBlankQuery1:
 
             sauce = requests.get(i)
-            time.sleep(3)
+            # time.sleep(3)
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofBlankSentencesQuery1.append(content.text)
