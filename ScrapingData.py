@@ -12,7 +12,7 @@ class FetchUrl:
         except ImportError:
             print("No module named 'google' found")
 
-        Simplequery1 = 'what is project managment?'
+        Simplequery1 = 'what is software testing?'
         ArryofUrlSimpleQuery1 = []
         for FetchedUrl in search(Simplequery1, tld='com', lang='en', stop=2, pause=2.0):
             ArryofUrlSimpleQuery1.append(FetchedUrl)
@@ -68,6 +68,11 @@ class FetchUrl:
             soup = bs.BeautifulSoup(sauce.content, 'lxml')
             for content in soup.find_all(['p']):
                 ArrayofSimpleSentencesQuery3.append(content.text)
+
+
+        print(ArrayofSimpleSentencesQuery1)
+        print(ArrayofSimpleSentencesQuery2)
+        print(ArrayofSimpleSentencesQuery3)
 
         print('...................')
         print('...................')

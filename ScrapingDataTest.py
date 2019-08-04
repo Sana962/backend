@@ -31,7 +31,7 @@ class FetchUrl:
 
             # print(ArryofUrlSimpleQuery1)
 
-            SimpleQuery2 = Simplequery1 + 'what are its advantages and Disadvantages pros and cons benefits ?'
+            SimpleQuery2 = Simplequery1 + 'what are its advantages and Disadvantages?'
             ArryofUrlSimpleQuery2 = []
             for FetchedUrl in search(SimpleQuery2, tld='com', lang='en', stop=2, pause=2.0):
                 ArryofUrlSimpleQuery2.append(FetchedUrl)
@@ -62,7 +62,7 @@ class FetchUrl:
                     ArrayofSimpleSentencesQuery3.append(content.text)
 
             # final_result = ArrayofSimpleSentencesQuery2
-            final_result = [ArrayofSimpleSentencesQuery1, ArrayofSimpleSentencesQuery2, ArrayofSimpleSentencesQuery3]
+            final_result = [[ArrayofSimpleSentencesQuery1, ArrayofSimpleSentencesQuery2, ArrayofSimpleSentencesQuery3], [Simplequery1, SimpleQuery2, Simplequery3]]
             # print(final_result)
 
         elif Template == 'Medium':
@@ -107,7 +107,7 @@ class FetchUrl:
                 for content in soup.find_all(['p']):
                     ArrayofMediumSentencesQuery3.append(content.text)
 
-            final_result = [ArrayofMediumSentencesQuery1, ArrayofMediumSentencesQuery2, ArrayofMediumSentencesQuery3]
+
 
             Mediumquery4 = Mediumquery1 + 'with diagram'
             ArryofUrlMediumQuery4 = []
@@ -121,6 +121,8 @@ class FetchUrl:
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
                 for content in soup.find_all(['p']):
                     ArrayofMediumSentencesQuery4.append(content.text)
+
+            final_result = [[ArrayofMediumSentencesQuery1, ArrayofMediumSentencesQuery2, ArrayofMediumSentencesQuery3, ArrayofMediumSentencesQuery4], [Mediumquery1, Mediumquery2, Mediumquery3, Mediumquery4]]
 
         elif Template == 'Complex':
             Complexquery1 = query
@@ -137,7 +139,7 @@ class FetchUrl:
                 for content in soup.find_all(['p']):
                     ArrayofComplexSentencesQuery1.append(content.text)
 
-            Complexquery2 = Complexquery1 + 'what are its advantages and Disadvantages?'
+            Complexquery2 = Complexquery1 + 'and what are its advantages and Disadvantages?'
             ArryofUrlComplexQuery2 = []
             for FetchedUrl in search(Complexquery2, tld='com', lang='en', stop=5, pause=2.0):
                 ArryofUrlComplexQuery2.append(FetchedUrl)
@@ -177,8 +179,7 @@ class FetchUrl:
                 for content in soup.find_all(['p']):
                     ArrayofComplexSentencesQuery4.append(content.text)
 
-            final_result = [ArrayofComplexSentencesQuery1, ArrayofComplexSentencesQuery2, ArrayofComplexSentencesQuery3,
-                            ArrayofComplexSentencesQuery4]
+            final_result = [[ArrayofComplexSentencesQuery1, ArrayofComplexSentencesQuery2, ArrayofComplexSentencesQuery3, ArrayofComplexSentencesQuery4], [Complexquery1, Complexquery2, Complexquery3, Complexquery4]]
 
         else:
             Blankquery1 = 'What is software testing?'
@@ -194,7 +195,7 @@ class FetchUrl:
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
                 for content in soup.find_all(['p']):
                     ArrayofBlankSentencesQuery1.append(content.text)
-            final_result = [ArrayofBlankSentencesQuery1]
+            final_result = [[ArrayofBlankSentencesQuery1], [Blankquery1]]
 
         return final_result
 

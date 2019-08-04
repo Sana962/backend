@@ -14,6 +14,7 @@ class word2vec:
 
     source_doc =  FetchUrl.Simplequery3
     target_docs = FetchUrl.ArrayofSimpleSentencesQuery1
+    print(source_doc, target_docs)
     sim_scoresSimpleQ1 = ds.calculate_similarity(source_doc, target_docs)
     print(sim_scoresSimpleQ1)
 
