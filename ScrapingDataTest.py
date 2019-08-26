@@ -1,6 +1,6 @@
 import re
 import string
-from string import punctuation
+from PreprocessingOnQuery import PreProcessQuery
 
 import bs4 as bs
 import requests
@@ -32,22 +32,28 @@ class FetchUrl:
     def fetchDataSet(self):
         Template = self.template
         query = self.query
+        obj = PreProcessQuery(self.query)
+        self.pattern = obj.getPattern()
         if Template == 'Simple':
 
             Simplequery1 = query
             ArryofUrlSimpleQuery1 = []
-            for FetchedUrl in search(Simplequery1, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(Simplequery1, tld='com', lang='en', stop=5, pause=2.0):
                 ArryofUrlSimpleQuery1.append(FetchedUrl)
+            print(ArryofUrlSimpleQuery1)
 
             ArrayofSimpleSentencesQuery1 = []
 
             for i in ArryofUrlSimpleQuery1:
-
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
-                    ArrayofSimpleSentencesQuery1.append(content.text)
 
+                few_words = 'software testing'
+
+                for p in soup.find_all('p'):
+                    if few_words in p.text:
+                        print(p)
+                        print(".............................................")
 
             NullFreeArrayofSimpleSentencesQuery1 = FetchUrl.removeEmptySpaces(ArrayofSimpleSentencesQuery1)
             DigitFreeArrayofSimpleSentencesQuery1 = FetchUrl.removeDigits(NullFreeArrayofSimpleSentencesQuery1)
@@ -58,8 +64,9 @@ class FetchUrl:
 
             SimpleQuery2 = Simplequery1 + 'what are its advantages and Disadvantages?'
             ArryofUrlSimpleQuery2 = []
-            for FetchedUrl in search(SimpleQuery2, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(SimpleQuery2, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlSimpleQuery2.append(FetchedUrl)
+            print(ArryofUrlSimpleQuery2)
 
 
             ArrayofSimpleSentencesQuery2 = []
@@ -80,8 +87,9 @@ class FetchUrl:
 
             Simplequery3 = Simplequery1 + 'and what are it examples'
             ArryofUrlSimpleQuery3 = []
-            for FetchedUrl in search(Simplequery3, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(Simplequery3, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlSimpleQuery3.append(FetchedUrl)
+            print(ArryofUrlSimpleQuery3)
 
             ArrayofSimpleSentencesQuery3 = []
 
@@ -177,7 +185,7 @@ class FetchUrl:
         elif Template == 'Complex':
             Complexquery1 = query
             ArryofUrlComplexQuery1 = []
-            for FetchedUrl in search(Complexquery1, tld='com', lang='en', stop=5, pause=2.0):
+            for FetchedUrl in search(Complexquery1, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlComplexQuery1.append(FetchedUrl)
 
             ArrayofComplexSentencesQuery1 = []
@@ -251,10 +259,11 @@ class FetchUrl:
             final_resultAfterEmptyString = FetchUrl.removeEmptySpaces(final_result)
 
         else:
-            Blankquery1 = 'What is software testing?'
+            Blankquery1 = query
             ArryofUrlBlankQuery1 = []
             for FetchedUrl in search(Blankquery1, tld='com', lang='en', stop=2, pause=2.0):
                 ArryofUrlBlankQuery1.append(FetchedUrl)
+            print(ArryofUrlBlankQuery1)
 
             ArrayofBlankSentencesQuery1 = []
 
@@ -262,9 +271,10 @@ class FetchUrl:
 
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
+                #patterns = r'offshore | team | offshore team |maximum| productivity'
+                print(self.pattern);
+                for content in soup.find_all(['p'], text=re.compile('r'+self.pattern, re.I)):
                     ArrayofBlankSentencesQuery1.append(content.text)
-
                 NullFreeArrayofBlankSentencesQuery1 = FetchUrl.removeEmptySpaces(ArrayofBlankSentencesQuery1)
                 DigitFreeArrayofBlankSentencesQuery1 = FetchUrl.removeDigits(NullFreeArrayofBlankSentencesQuery1)
                 PunctuationFreeArrayofBlankSentencesQuery1 = FetchUrl.removePunctuation(DigitFreeArrayofBlankSentencesQuery1)
@@ -274,5 +284,5 @@ class FetchUrl:
         return final_result
 
 
-#a = FetchUrl('what is software testing?', 'Simple')
+#a = FetchUrl('How to get maximum productivity from an offshore team?', 'Blank')
 #print(a.fetchDataSet())
