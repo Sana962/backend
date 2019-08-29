@@ -4,8 +4,8 @@ import gensim
 from .DocSim import DocSim
 from .ScrapingDataDummy import FetchUrl
 # from ScrapingDataTest import  FetchUrl
-# from api.assignmentapi.DocSim import DocSim
-# from api.assignmentapi.ScrapingDataDummy import FetchUrl
+#from api.assignmentapi.DocSim import DocSim
+#from api.assignmentapi.ScrapingDataDummy import FetchUrl
 
 
 class Word2Vec:
@@ -30,10 +30,10 @@ class Word2Vec:
             # final_response.append(value)
             # print(final_response)
             afterSim = self.ds.calculate_similarity(data[1][index], value)
-            print(afterSim)
+            #print(afterSim)
             final_response.append(afterSim)
-            print(final_response)
+            #print(final_response)
         return final_response
 
-#v2v = Word2Vec('what is software ttesting?', 'Simple')
+#v2v = Word2Vec('how to perform testing?', 'Blank')
 #print(v2v.loadFormat())

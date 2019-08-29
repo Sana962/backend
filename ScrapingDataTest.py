@@ -36,8 +36,9 @@ class FetchUrl:
 
             Simplequery1 = query
             ArryofUrlSimpleQuery1 = []
-            for FetchedUrl in search(Simplequery1, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(Simplequery1, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlSimpleQuery1.append(FetchedUrl)
+            print(ArryofUrlSimpleQuery1)
 
             ArrayofSimpleSentencesQuery1 = []
 
@@ -58,8 +59,9 @@ class FetchUrl:
 
             SimpleQuery2 = Simplequery1 + 'what are its advantages and Disadvantages?'
             ArryofUrlSimpleQuery2 = []
-            for FetchedUrl in search(SimpleQuery2, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(SimpleQuery2, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlSimpleQuery2.append(FetchedUrl)
+            print(ArryofUrlSimpleQuery2)
 
 
             ArrayofSimpleSentencesQuery2 = []
@@ -80,8 +82,9 @@ class FetchUrl:
 
             Simplequery3 = Simplequery1 + 'and what are it examples'
             ArryofUrlSimpleQuery3 = []
-            for FetchedUrl in search(Simplequery3, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(Simplequery3, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlSimpleQuery3.append(FetchedUrl)
+            print(ArryofUrlSimpleQuery3)
 
             ArrayofSimpleSentencesQuery3 = []
 
@@ -275,4 +278,4 @@ class FetchUrl:
 
 
 #a = FetchUrl('what is software testing?', 'Simple')
-#print(a.fetchDataSet())
+#(a.fetchDataSet())

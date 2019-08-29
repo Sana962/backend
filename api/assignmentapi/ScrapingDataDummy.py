@@ -1,6 +1,6 @@
 import re
 import string
-from string import punctuation
+from PreprocessingOnQuery import PreProcessQuery
 
 import bs4 as bs
 import requests
@@ -29,78 +29,19 @@ class FetchUrl:
        arr = ["".join( j for j in i if j not in string.punctuation) for i in array]
        return arr
 
+    def removeStringWithCertainWord(array):
+        keywordFilter = ['Let', 'Tutorial', '...', '?','let', 'tutorial', ':', 'article']
+        result = [sent for sent in array
+                if not any(word in sent for word in keywordFilter)]
+        return result
+
     def fetchDataSet(self):
         Template = self.template
         query = self.query
-        if Template == 'Simple':
+        obj = PreProcessQuery(self.query)
+        self.pattern = obj.getPattern()
 
-            Simplequery1 = query
-            ArryofUrlSimpleQuery1 = []
-            for FetchedUrl in search(Simplequery1, tld='com', lang='en', stop=2, pause=2.0):
-                ArryofUrlSimpleQuery1.append(FetchedUrl)
-
-            ArrayofSimpleSentencesQuery1 = []
-
-            for i in ArryofUrlSimpleQuery1:
-
-                sauce = requests.get(i)
-                soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
-                    ArrayofSimpleSentencesQuery1.append(content.text)
-
-
-            NullFreeArrayofSimpleSentencesQuery1 = FetchUrl.removeEmptySpaces(ArrayofSimpleSentencesQuery1)
-            DigitFreeArrayofSimpleSentencesQuery1 = FetchUrl.removeDigits(NullFreeArrayofSimpleSentencesQuery1)
-            PunctuationFreeArrayofSimpleSentencesQuery1 = FetchUrl.removePunctuation(DigitFreeArrayofSimpleSentencesQuery1)
-
-
-
-
-            SimpleQuery2 = Simplequery1 + 'what are its advantages and Disadvantages?'
-            ArryofUrlSimpleQuery2 = []
-            for FetchedUrl in search(SimpleQuery2, tld='com', lang='en', stop=2, pause=2.0):
-                ArryofUrlSimpleQuery2.append(FetchedUrl)
-
-
-            ArrayofSimpleSentencesQuery2 = []
-
-            for i in ArryofUrlSimpleQuery2:
-
-                sauce = requests.get(i)
-                soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
-                    ArrayofSimpleSentencesQuery2.append(content.text)
-
-                ModifiedArrayofSimpleSentencesQuery2 = FetchUrl.removeEmptySpaces(ArrayofSimpleSentencesQuery2)
-                DigitFreeArrayofSimpleSentencesQuery2 = FetchUrl.removeDigits(ModifiedArrayofSimpleSentencesQuery2)
-                PunctuationFreeArrayofSimpleSentencesQuery2 = FetchUrl.removePunctuation(DigitFreeArrayofSimpleSentencesQuery2)
-
-
-
-
-            Simplequery3 = Simplequery1 + 'and what are it examples'
-            ArryofUrlSimpleQuery3 = []
-            for FetchedUrl in search(Simplequery3, tld='com', lang='en', stop=2, pause=2.0):
-                ArryofUrlSimpleQuery3.append(FetchedUrl)
-
-            ArrayofSimpleSentencesQuery3 = []
-
-            for i in ArryofUrlSimpleQuery3:
-
-                sauce = requests.get(i)
-                soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
-                    ArrayofSimpleSentencesQuery3.append(content.text)
-
-                ModifiedArrayofSimpleSentencesQuery3 = FetchUrl.removeEmptySpaces(ArrayofSimpleSentencesQuery3)
-                DigitFreeArrayofSimpleSentencesQuery3 = FetchUrl.removeDigits(ModifiedArrayofSimpleSentencesQuery3)
-                PunctuationFreeArrayofSimpleSentencesQuery3 = FetchUrl.removePunctuation(DigitFreeArrayofSimpleSentencesQuery3)
-
-
-            final_result = [[PunctuationFreeArrayofSimpleSentencesQuery1, PunctuationFreeArrayofSimpleSentencesQuery2, PunctuationFreeArrayofSimpleSentencesQuery3], [Simplequery1, SimpleQuery2, Simplequery3]]
-
-
-        elif Template == 'Medium':
+        if Template == 'Medium':
             Mediumquery1 = query
             ArryofUrlMediumQuery1 = []
             for FetchedUrl in search(Mediumquery1, tld='com', lang='en', stop=5, pause=2.0):
@@ -155,29 +96,12 @@ class FetchUrl:
             PunctuationFreeArrayofMediumSentencesQuery3 = FetchUrl.removePunctuation(DigitFreeArrayofMediumSentencesQuery3)
 
 
-            Mediumquery4 = Mediumquery1 + 'with diagram'
-            ArryofUrlMediumQuery4 = []
-            for FetchedUrl in search(Mediumquery4, tld='com', lang='en', stop=5, pause=2.0):
-                ArryofUrlMediumQuery4.append(FetchedUrl)
-
-            ArrayofMediumSentencesQuery4 = []
-            for i in ArryofUrlMediumQuery4:
-
-                sauce = requests.get(i)
-                soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
-                    ArrayofMediumSentencesQuery4.append(content.text)
-
-                NullFreeArrayofMediumSentencesQuery4 = FetchUrl.removeEmptySpaces(ArrayofMediumSentencesQuery4)
-                DigitFreeArrayofMediumSentencesQuery4 = FetchUrl.removeDigits(NullFreeArrayofMediumSentencesQuery4)
-                PunctuationFreeArrayofMediumSentencesQuery4 = FetchUrl.removePunctuation(DigitFreeArrayofMediumSentencesQuery4)
-
-            final_result = [[PunctuationFreeArrayofMediumSentencesQuery1, PunctuationFreeArrayofMediumSentencesQuery2, PunctuationFreeArrayofMediumSentencesQuery3, PunctuationFreeArrayofMediumSentencesQuery4], [Mediumquery1, Mediumquery2, Mediumquery3, Mediumquery4]]
+            final_result = [[PunctuationFreeArrayofMediumSentencesQuery1, PunctuationFreeArrayofMediumSentencesQuery2, PunctuationFreeArrayofMediumSentencesQuery3], [Mediumquery1, Mediumquery2, Mediumquery3]]
 
         elif Template == 'Complex':
             Complexquery1 = query
             ArryofUrlComplexQuery1 = []
-            for FetchedUrl in search(Complexquery1, tld='com', lang='en', stop=5, pause=2.0):
+            for FetchedUrl in search(Complexquery1, tld='com', lang='en', stop=1, pause=2.0):
                 ArryofUrlComplexQuery1.append(FetchedUrl)
 
             ArrayofComplexSentencesQuery1 = []
@@ -251,10 +175,11 @@ class FetchUrl:
             final_resultAfterEmptyString = FetchUrl.removeEmptySpaces(final_result)
 
         else:
-            Blankquery1 = 'What is software testing?'
+            Blankquery1 = query
             ArryofUrlBlankQuery1 = []
-            for FetchedUrl in search(Blankquery1, tld='com', lang='en', stop=2, pause=2.0):
+            for FetchedUrl in search(Blankquery1, tld='com', lang='en', stop=3, pause=2.0):
                 ArryofUrlBlankQuery1.append(FetchedUrl)
+            print(ArryofUrlBlankQuery1)
 
             ArrayofBlankSentencesQuery1 = []
 
@@ -262,10 +187,13 @@ class FetchUrl:
 
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p']):
+                #patterns = r'offshore | team | offshore team |maximum| productivity'
+                print(self.pattern);
+                for content in soup.find_all(['p'], text=re.compile('r'+self.pattern, re.I)):
                     ArrayofBlankSentencesQuery1.append(content.text)
 
-                NullFreeArrayofBlankSentencesQuery1 = FetchUrl.removeEmptySpaces(ArrayofBlankSentencesQuery1)
+                ResultWithoutCertainWord = FetchUrl.removeStringWithCertainWord(ArrayofBlankSentencesQuery1)
+                NullFreeArrayofBlankSentencesQuery1 = FetchUrl.removeEmptySpaces(ResultWithoutCertainWord)
                 DigitFreeArrayofBlankSentencesQuery1 = FetchUrl.removeDigits(NullFreeArrayofBlankSentencesQuery1)
                 PunctuationFreeArrayofBlankSentencesQuery1 = FetchUrl.removePunctuation(DigitFreeArrayofBlankSentencesQuery1)
 
@@ -274,5 +202,5 @@ class FetchUrl:
         return final_result
 
 
-#a = FetchUrl('what is software testing?', 'Simple')
-#print(a.fetchDataSet())
+a = FetchUrl('what are software testing objective?', 'Blank')
+print(a.fetchDataSet())

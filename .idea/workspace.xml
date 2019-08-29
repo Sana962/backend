@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00995a7a-984b-44f3-b885-55f82229d7ef" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.google-cookie" beforeDir="false" afterPath="$PROJECT_DIR$/.google-cookie" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/DocSim.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ScrapingDataTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScrapingDataTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/.google-cookie" beforeDir="false" afterPath="$PROJECT_DIR$/api/.google-cookie" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/assignmentapi/.google-cookie" beforeDir="false" afterPath="$PROJECT_DIR$/api/assignmentapi/.google-cookie" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/assignmentapi/testimport.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/assignmentapi/testimport.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +29,7 @@
     <SUITE FILE_PATH="coverage/untitled$urlsandscrape.coverage" NAME="urlsandscrape Coverage Results" MODIFIED="1564320405240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$dynamictest.coverage" NAME="dynamictest Coverage Results" MODIFIED="1563446806071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$testmultipages.coverage" NAME="testmultipages Coverage Results" MODIFIED="1563002926212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Backend$ScrapingDataTest.coverage" NAME="ScrapingDataTest Coverage Results" MODIFIED="1565580446943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$scrapimg.coverage" NAME="scrapimg Coverage Results" MODIFIED="1563175811586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$example.coverage" NAME="example Coverage Results" MODIFIED="1564475193451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$DocSim.coverage" NAME="DocSim Coverage Results" MODIFIED="1563954085662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../document-similarity-master" />
@@ -37,79 +38,17 @@
     <SUITE FILE_PATH="coverage/untitled$newscrape.coverage" NAME="newscrape Coverage Results" MODIFIED="1563472160951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$wordembedding2.coverage" NAME="wordembedding2 Coverage Results" MODIFIED="1563946091824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$setup.coverage" NAME="setup Coverage Results" MODIFIED="1563516568673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/cdQA-master/cdQA-master/pytorch-transformers-master" />
-    <SUITE FILE_PATH="coverage/Backend$testImport.coverage" NAME="testImport Coverage Results" MODIFIED="1565114276988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
+    <SUITE FILE_PATH="coverage/Backend$testImport.coverage" NAME="testImport Coverage Results" MODIFIED="1565622812806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testimport.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testimport.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/assignmentapi/testimport.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/assignmentapi/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/assignmentapi/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/assignmentapi/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/assignmentapi/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/assignmentapi/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocSim.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DocSim.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScrapingDataDummy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="48" column="31" selection-end-line="277" selection-end-column="24" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,11 +57,20 @@
       <file leaf-file-name="ScrapingDataTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScrapingDataTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+            <state relative-caret-position="505">
+              <caret line="280" column="19" lean-forward="true" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocSim.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DocSim.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -140,6 +88,9 @@
     <findStrings>
       <find>,</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\abc\Desktop\Backend\api</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -151,10 +102,10 @@
         <option value="$PROJECT_DIR$/example.py" />
         <option value="$PROJECT_DIR$/ScrapingData.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/PreprocessingOnData.py" />
-        <option value="$PROJECT_DIR$/DocSim.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" />
         <option value="$PROJECT_DIR$/ScrapingDataTest.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/testimport.py" />
+        <option value="$PROJECT_DIR$/DocSim.py" />
       </list>
     </option>
   </component>
@@ -178,6 +129,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,27 +137,10 @@
               <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="assignmentapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,25 +182,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.testImport">
-    <configuration name="Helo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\abc\Desktop\untitled\ScrapingData.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="PreprocessingOnData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -318,6 +234,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="ScrapingDataTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScrapingDataTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -403,19 +338,19 @@
       <item itemvalue="Python.ScrapingData" />
       <item itemvalue="Python.testImport" />
       <item itemvalue="Python.example" />
-      <item itemvalue="Python.Helo" />
       <item itemvalue="Python.ScrapingDataDummy" />
       <item itemvalue="Python.b" />
       <item itemvalue="Python.a" />
       <item itemvalue="Python.PreprocessingOnData" />
+      <item itemvalue="Python.ScrapingDataTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ScrapingDataTest" />
         <item itemvalue="Python.ScrapingDataDummy" />
         <item itemvalue="Python.PreprocessingOnData" />
         <item itemvalue="Python.a" />
         <item itemvalue="Python.b" />
-        <item itemvalue="Python.Helo" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564907381643</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="After Similarity Checking it is stable release">
+      <created>1565117433224</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565117433224</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -450,19 +392,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32881355" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.37118644" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
       <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" weight="0.32881355" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" visible="true" weight="0.37118644" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2549168" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" weight="0.37118644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.295764" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32548475" />
+      <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32542372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
@@ -480,6 +423,35 @@
       <window_info anchor="bottom" id="Salesforce" order="16" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="SFDX" order="11" />
+      <window_info anchor="bottom" id="DB Execution Console" order="12" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" visible="true" weight="0.32881355" />
+      <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32542372" />
+      <window_info id="Query Editor" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32881355" />
+      <window_info anchor="bottom" id="Salesforce" order="16" />
+      <window_info anchor="bottom" id="Log Manager" order="13" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2965204" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
+      <window_info anchor="bottom" id="Execute Anonymous" order="15" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" weight="0.37118644" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -507,7 +479,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before preprocessing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before preprocessing" />
+    <MESSAGE value="After Similarity Checking it is stable release" />
+    <option name="LAST_COMMIT_MESSAGE" value="After Similarity Checking it is stable release" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -649,33 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="48" column="31" selection-end-line="277" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ScrapingDataTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DocSim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/assignmentapi/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -703,17 +649,41 @@
     <entry file="file://$PROJECT_DIR$/api/assignmentapi/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="48" column="31" selection-end-line="277" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScrapingDataTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="280" column="19" lean-forward="true" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/assignmentapi/testimport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocSim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
         </state>
       </provider>
     </entry>
