@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00995a7a-984b-44f3-b885-55f82229d7ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/assignmentapi/.google-cookie" beforeDir="false" afterPath="$PROJECT_DIR$/api/assignmentapi/.google-cookie" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,6 +26,7 @@
     <SUITE FILE_PATH="coverage/untitled$DocSim.coverage" NAME="DocSim Coverage Results" MODIFIED="1563954085662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../document-similarity-master" />
     <SUITE FILE_PATH="coverage/Backend___Copy___Copy$testImport.coverage" NAME="testImport Coverage Results" MODIFIED="1566822482952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
     <SUITE FILE_PATH="coverage/untitled$wordembedding2.coverage" NAME="wordembedding2 Coverage Results" MODIFIED="1563946091824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Backend___Copy___Copy$ScrapingDataDummy.coverage" NAME="ScrapingDataDummy Coverage Results" MODIFIED="1567008916947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
     <SUITE FILE_PATH="coverage/Backend$testImport.coverage" NAME="testImport Coverage Results" MODIFIED="1565622812806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
     <SUITE FILE_PATH="coverage/untitled$wordembedding.coverage" NAME="wordembedding Coverage Results" MODIFIED="1563947480542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Backend$PreprocessingOnData.coverage" NAME="PreprocessingOnData Coverage Results" MODIFIED="1564926069525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
@@ -53,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScrapingDataDummy.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScrapingDataDummy.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4743">
-              <caret line="286" column="80" selection-start-line="286" selection-start-column="80" selection-end-line="286" selection-end-column="80" />
+            <state relative-caret-position="505">
+              <caret line="295" column="23" lean-forward="true" selection-start-line="295" selection-start-column="23" selection-end-line="295" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -74,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreprocessingOnQuery.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PreprocessingOnQuery.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PreprocessingOnQuery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="1564">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
         </entry>
@@ -123,8 +126,8 @@
         <option value="$PROJECT_DIR$/DocSim.py" />
         <option value="$PROJECT_DIR$/PreprocessingOnQuery.py" />
         <option value="$PROJECT_DIR$/ScrapingDataTest.py" />
-        <option value="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/testimport.py" />
+        <option value="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" />
       </list>
     </option>
   </component>
@@ -201,7 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testImport">
+  <component name="RunManager" selected="Python.ScrapingDataDummy">
     <configuration name="HelloNewFile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -366,9 +369,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ScrapingDataDummy" />
         <item itemvalue="Python.ScrapingDataTest" />
         <item itemvalue="Python.HelloNewFile" />
-        <item itemvalue="Python.ScrapingDataDummy" />
         <item itemvalue="Python.PreprocessingOnData" />
         <item itemvalue="Python.a" />
       </list>
@@ -406,7 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1566841184355</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="After Definition part done">
+      <created>1566977468119</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566977468119</updated>
+    </task>
+    <task id="LOCAL-00005" summary="After Definition part done">
+      <created>1566977621396</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566977621396</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -426,10 +443,10 @@
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.32881355" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
       <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" weight="0.4118644" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" weight="0.46101695" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30030257" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30937973" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32542372" />
@@ -456,27 +473,27 @@
       <window_info anchor="bottom" id="DB Execution Console" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" visible="true" weight="0.32881355" />
       <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32542372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32881355" />
       <window_info id="Query Editor" order="2" />
-      <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" visible="true" weight="0.32881355" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
       <window_info anchor="bottom" id="Log Manager" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2965204" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Execute Anonymous" order="15" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" weight="0.37118644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -710,20 +727,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+    <entry file="file://$PROJECT_DIR$/PreprocessingOnQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4743">
-          <caret line="286" column="80" selection-start-line="286" selection-start-column="80" selection-end-line="286" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1564">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingOnQuery.py">
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="505">
+          <caret line="295" column="23" lean-forward="true" selection-start-line="295" selection-start-column="23" selection-end-line="295" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
