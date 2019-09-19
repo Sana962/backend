@@ -25,7 +25,7 @@ class AssignmentSimpleView(viewsets.ViewSet):
     def create(request):
         decoded = request.body.decode('utf8').replace("'", '"')
         obj = json.loads(decoded)
-        print(obj.get("query"))
+        #print(obj.get("query"))
         from .testimport import Word2Vec
         test_import = Word2Vec(obj.get("query"), obj.get("template"))
         final_response = test_import.loadFormat()
