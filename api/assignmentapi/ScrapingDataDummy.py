@@ -2,7 +2,6 @@ import re
 import string
 from .PreprocessingOnQuery import PreProcessQuery
 #from api.assignmentapi.PreprocessingOnQuery import PreProcessQuery
-
 import bs4 as bs
 import requests
 from googlesearch import search
@@ -48,8 +47,6 @@ class FetchUrl:
             ArryofUrlMediumQuery1 = []
             for FetchedUrl in search(Mediumquery1, tld='com', lang='en', stop=3, pause=2.0):
                 ArryofUrlMediumQuery1.append(FetchedUrl)
-            print(ArryofUrlMediumQuery1)
-
             ArrayofMediumSentencesQuery1 = []
 
             for i in ArryofUrlMediumQuery1:
@@ -68,16 +65,13 @@ class FetchUrl:
 
             Mediumquery2 = Mediumquery1 + 'what are its advantages and Disadvantages?'
 
-            i = 'http://www.google.com/images?q=what is project managment what are its advantages and disadvantages'
-
-            sauce = requests.get(i)
-            soup = bs.BeautifulSoup(sauce.content, 'lxml')
-            print(soup)
-            for content in soup.find_all(['img'], limit=1):
-                a = (content['src'])
-                ImageArrayofMediumSentencesQuery2 =[]
-                ImageArrayofMediumSentencesQuery2.append(a)
-
+            USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+            headers = {'User-Agent': USER_AGENT}
+            query_key = Mediumquery2
+            query_key = query_key.replace(' ', '+')  # replace space in query space with +
+            tgt_url = 'https://www.google.com.sg/search?q={}&tbm=isch&tbs=sbd:0'.format(query_key)  # last part is the sort by relv
+            r = requests.get(tgt_url, headers=headers)
+            ImageArrayofMediumSentencesQuery2 = [n for n in re.findall('"ou":"([a-zA-Z0-9_./:-]+.(?:jpg|jpeg|png))",', r.text)]
 
             Mediumquery3 = Mediumquery1 + 'example'
             ArryofUrlMediumQuery3 = []
@@ -125,14 +119,14 @@ class FetchUrl:
 
             Complexquery2 = Complexquery1 + 'and what are its advantages and Disadvantages?'
 
-            i = 'http://www.google.com/search?q=' + Complexquery2 + '&tbm=isch'
-
-            sauce = requests.get(i)
-            soup = bs.BeautifulSoup(sauce.content, 'lxml')
-            for content in soup.find_all(['img'], limit=1):
-                a = (content['src'])
-                ImageArrayofComplexSentencesQuery2 = []
-                ImageArrayofComplexSentencesQuery2.append(a)
+            USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+            headers = {'User-Agent': USER_AGENT}
+            query_key = Complexquery2
+            query_key = query_key.replace(' ', '+')  # replace space in query space with +
+            tgt_url = 'https://www.google.com.sg/search?q={}&tbm=isch&tbs=sbd:0'.format(
+                query_key)  # last part is the sort by relv
+            r = requests.get(tgt_url, headers=headers)
+            ImageArrayofComplexSentencesQuery2 = [n for n in re.findall('"ou":"([a-zA-Z0-9_./:-]+.(?:jpg|jpeg|png))",', r.text)]
 
             Complexquery3 = 'Given example of'+Complexquery1
             ArryofUrlComplexQuery3 = []
@@ -153,14 +147,14 @@ class FetchUrl:
 
             Complexquery4 =  'diagram of'+Complexquery1
 
-            i = 'http://www.google.com/search?q=' + Complexquery4 + '&tbm=isch'
-
-            sauce = requests.get(i)
-            soup = bs.BeautifulSoup(sauce.content, 'lxml')
-            for content in soup.find_all(['img'], limit=1):
-                a = (content['src'])
-                ImageArrayofComplexSentencesQuery4 = []
-                ImageArrayofComplexSentencesQuery4.append(a)
+            USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+            headers = {'User-Agent': USER_AGENT}
+            query_key = Complexquery4
+            query_key = query_key.replace(' ', '+')  # replace space in query space with +
+            tgt_url = 'https://www.google.com.sg/search?q={}&tbm=isch&tbs=sbd:0'.format(
+                query_key)  # last part is the sort by relv
+            r = requests.get(tgt_url, headers=headers)
+            ImageArrayofComplexSentencesQuery4 = [n for n in re.findall('"ou":"([a-zA-Z0-9_./:-]+.(?:jpg|jpeg|png))",', r.text)]
 
             final_result = [[PunctuationFreeArrayofComplexSentencesQuery1,ImageArrayofComplexSentencesQuery2,PunctuationFreeArrayofComplexSentencesQuery3,ImageArrayofComplexSentencesQuery4], [Complexquery1,Complexquery2,Complexquery3,Complexquery4]]
 
@@ -193,6 +187,6 @@ class FetchUrl:
         return final_result
 
 
-# a = FetchUrl('what is software testing?', 'Complex')
-# a = FetchUrl('what is a bug', 'Blank')
+# a = FetchUrl('what is software testing?', 'Medium')
+# #a = FetchUrl('what is a bug', 'Blank')
 # print(a.fetchDataSet())
