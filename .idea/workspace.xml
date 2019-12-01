@@ -22,7 +22,7 @@
     <SUITE FILE_PATH="coverage/untitled$scraptest.coverage" NAME="scraptest Coverage Results" MODIFIED="1563446682253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$Helo.coverage" NAME="Helo Coverage Results" MODIFIED="1564322488942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$wordembedding.coverage" NAME="wordembedding Coverage Results" MODIFIED="1563947480542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Backend$ScrapingDataDummy.coverage" NAME="ScrapingDataDummy Coverage Results" MODIFIED="1573566320616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
+    <SUITE FILE_PATH="coverage/Backend$ScrapingDataDummy.coverage" NAME="ScrapingDataDummy Coverage Results" MODIFIED="1575210061761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
     <SUITE FILE_PATH="coverage/Backend$PreprocessingOnData.coverage" NAME="PreprocessingOnData Coverage Results" MODIFIED="1564926069525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/assignmentapi" />
     <SUITE FILE_PATH="coverage/untitled$googlesearchscrape.coverage" NAME="googlesearchscrape Coverage Results" MODIFIED="1563513636918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$urlsandscrape.coverage" NAME="urlsandscrape Coverage Results" MODIFIED="1564320405240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -45,8 +45,8 @@
       <file leaf-file-name="PreprocessingOnQuery.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="1020">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -57,8 +57,8 @@
       <file leaf-file-name="ScrapingDataDummy.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="120" column="41" lean-forward="true" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+            <state relative-caret-position="374">
+              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -81,6 +81,7 @@
       <find>|</find>
       <find>Complexquery1</find>
       <find>PunctuationFreeBlankDescription</find>
+      <find>BlankDefiitionSentences</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\abc\Desktop\Backend\api</dir>
@@ -101,8 +102,8 @@
         <option value="$PROJECT_DIR$/api/assignmentapi/testimport.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/views.py" />
         <option value="$PROJECT_DIR$/hello.py" />
-        <option value="$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/aaa.py" />
+        <option value="$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py" />
         <option value="$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py" />
       </list>
     </option>
@@ -127,6 +128,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,7 +155,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.aaa">
+  <component name="RunManager" selected="Python.ScrapingDataDummy">
     <configuration name="PreprocessingOnData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -362,8 +363,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.aaa" />
         <item itemvalue="Python.ScrapingDataDummy" />
+        <item itemvalue="Python.aaa" />
         <item itemvalue="Python.hello" />
         <item itemvalue="Python.ScrapingDataTest" />
         <item itemvalue="Python.PreprocessingOnData" />
@@ -409,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569090547036</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="After addition of features in assignment">
+      <created>1573573322616</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573573322616</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -423,15 +431,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32881355" />
-      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
+      <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
-      <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" weight="0.25932205" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" visible="true" weight="0.32881355" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33509833" />
+      <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" weight="0.6694915" />
+      <window_info anchor="bottom" id="Terminal" order="17" sideWeight="0.49924356" weight="0.5457627" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10590015" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32542372" />
@@ -446,10 +455,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Log Manager" order="13" />
-      <window_info anchor="bottom" id="Execute Anonymous" order="15" />
+      <window_info anchor="bottom" id="Execute Anonymous" order="14" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Salesforce" order="16" />
+      <window_info anchor="bottom" id="Salesforce" order="15" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881355" />
     </layout>
     <layout-to-restore>
@@ -458,28 +467,28 @@
       <window_info anchor="bottom" id="DB Execution Console" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" x="22" y="69" width="1322" height="590" id="Run" order="2" visible="true" weight="0.32881355" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32542372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32881355" />
       <window_info id="Query Editor" order="2" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
-      <window_info anchor="bottom" id="Log Manager" order="13" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2965204" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
+      <window_info anchor="bottom" id="Log Manager" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Execute Anonymous" order="15" />
       <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49924356" weight="0.37118644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2965204" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.37118644" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32881355" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32881355" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +520,8 @@
     <MESSAGE value="After Similarity Checking it is stable release" />
     <MESSAGE value="After uploading file" />
     <MESSAGE value="After some setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="After some setting" />
+    <MESSAGE value="After addition of features in assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="After addition of features in assignment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -519,6 +529,167 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/testimport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4233">
+          <caret line="249" column="60" selection-start-line="249" selection-start-column="60" selection-end-line="249" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/testimport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4233">
+          <caret line="249" column="60" selection-start-line="249" selection-start-column="60" selection-end-line="249" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/testimport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4233">
+          <caret line="249" column="60" selection-start-line="249" selection-start-column="60" selection-end-line="249" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3859">
+          <caret line="227" column="72" lean-forward="true" selection-start-line="227" selection-start-column="72" selection-end-line="227" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -801,20 +972,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/aaa.py" />
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/testimport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="505">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/assignmentapi/aaa.py">
+    <entry file="file://$PROJECT_DIR$/api/assignmentapi/PreprocessingOnQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+        <state relative-caret-position="1020">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -823,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/assignmentapi/ScrapingDataDummy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="120" column="41" lean-forward="true" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+        <state relative-caret-position="374">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

@@ -15,8 +15,10 @@ class PreProcessQuery:
 
     def removePeriod(self, lowerdCaseQuery):                   # Remove . from query
         remove1 = re.sub(r'\.', ' ', lowerdCaseQuery)
-        revmove2 = re.sub(r'[0-9]+', ' ', remove1)
-        return revmove2
+        #revmove2 = re.sub(r'[0-9]+', ' ', remove1)
+        return remove1
+
+
 
     def stopwords(self,DotFreeQuery):
         array = DotFreeQuery.split()

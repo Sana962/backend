@@ -14,16 +14,16 @@ class FetchUrl:
         self.query = query
         self.template = template
 
-    def removeEmptySpaces(array):             #Remove empty spaces
+    # def removeEmptySpaces(array):             #Remove empty spaces
+    #
+    #     arr = list(filter(str.strip, array))
+    #     return arr
 
-        arr = list(filter(str.strip, array))
-        return arr
-
-    def removeDigits(array):                  #Remove digits
-
-        pattern = '[0-9]'
-        arr = [re.sub(pattern, '', i) for i in array]
-        return arr
+    # def removeDigits(array):                  #Remove digits
+    #
+    #     pattern = '[0-9]'
+    #     arr = [re.sub(pattern, '', i) for i in array]
+    #     return arr
 
     def removePunctuation(array):             #Remove punctuation marks
 
@@ -31,10 +31,15 @@ class FetchUrl:
        return arr
 
     def removeStringWithCertainWord(array):    #Filter Keywords
-        keywordFilter = ['Let','categories', 'Tutorial', '...', '?','let', 'tutorial', ':', 'article', 'Material', 'I would like', 'Types', '@']
+        keywordFilter = ['learn', 'Learn','Figure','figure','what','What','-','Let','categories', 'Tutorial', '...','let', 'tutorial', ':', 'article', 'Material', 'I would like', 'Types', '@', 'types', 'what if', 'Following', 'following', 'here', 'Here']
         result = [sent for sent in array
                 if not any(word in sent for word in keywordFilter)]
         return result
+
+    # def RemoveDuplicateSentences(array):      #Remove duplicate keywords
+    #
+    #     result= list(dict.fromkeys(array))
+    #     return result
 
     def fetchDataSet(self):                    # This function contain main working
         Template = self.template
@@ -46,7 +51,7 @@ class FetchUrl:
         if Template == 'Medium':
             MediumDefinitionQuery = query
             UrlMediumDefinition = []
-            for FetchedUrl in search(MediumDefinitionQuery, tld='com', lang='en', stop=3, pause=2.0):          #Fetching URLS
+            for FetchedUrl in search(MediumDefinitionQuery, tld='com', lang='en', stop=5, pause=2.0):          #Fetching URLS
                 print(UrlMediumDefinition.append(FetchedUrl))
 
             MediumDefinitionSentences = []
@@ -56,18 +61,18 @@ class FetchUrl:
 
                 sauce = requests.get(i)                          # Requesting for Fetched Url
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')   # Parsing the page
-                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=3):     #Fetching paragraph that match the pattern of keywords
+                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=5):     #Fetching paragraph that match the pattern of keywords
                     MediumDefinitionSentences.append(content.text)
 
-                ResultWithoutCertainWord = FetchUrl.removeStringWithCertainWord(MediumDefinitionSentences)
-                NullFreeMediumDefinition= FetchUrl.removeEmptySpaces(ResultWithoutCertainWord)
-                DigitFreeMediumDefinition = FetchUrl.removeDigits(NullFreeMediumDefinition)
-                PunctuationFreeMediumDefinition = FetchUrl.removePunctuation(DigitFreeMediumDefinition)
+                MediumDefinitiondoc = [w.strip() for w in MediumDefinitionSentences if len(w.strip()) >= 35]
+                MediumDefinitionWithoutDuplicate = list(dict.fromkeys(MediumDefinitiondoc))
+                ResultWithoutCertainWord = FetchUrl.removeStringWithCertainWord(MediumDefinitionWithoutDuplicate)
+                PunctuationFreeMediumDefinition = FetchUrl.removePunctuation(ResultWithoutCertainWord)
 
             MediumDescriptionQuery = 'Full detailed description of'+MediumDefinitionQuery
 
             UrlMediumDescription = []
-            for FetchedUrl in search(MediumDescriptionQuery, tld='com', lang='en', stop=5, pause=2.0):  # Fetching URLS
+            for FetchedUrl in search(MediumDescriptionQuery, tld='com', lang='en', start=2, stop=10, pause=2.0):  # Fetching URLS
                 print(UrlMediumDescription.append(FetchedUrl))
 
 
@@ -75,13 +80,13 @@ class FetchUrl:
 
                 sauce = requests.get(i)                          # Requesting for Fetched Url
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')   # Parsing the page
-                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=5):     #Fetching paragraph that match the pattern of keywords
+                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=10):     #Fetching paragraph that match the pattern of keywords
                     MediumDescriptionSentences.append(content.text)
 
-                ResultWithoutCertainWordDescription = FetchUrl.removeStringWithCertainWord(MediumDescriptionSentences)
-                NullFreeMediumDescription= FetchUrl.removeEmptySpaces(ResultWithoutCertainWordDescription)
-                DigitFreeMediumDescription = FetchUrl.removeDigits(NullFreeMediumDescription)
-                PunctuationFreeMediumDescription = FetchUrl.removePunctuation(DigitFreeMediumDescription)
+                MediumDescriptiondoc = [w.strip() for w in MediumDescriptionSentences if len(w.strip()) >= 35]
+                MediumDescriptionWithoutDuplicate = list(dict.fromkeys(MediumDescriptiondoc))
+                ResultWithoutCertainWordDescription = FetchUrl.removeStringWithCertainWord(MediumDescriptionWithoutDuplicate)
+                PunctuationFreeMediumDescription = FetchUrl.removePunctuation(ResultWithoutCertainWordDescription)
 
             MediumProsConsQuery = MediumDefinitionQuery + 'what are its advantages and Disadvantages?'
 
@@ -106,54 +111,32 @@ class FetchUrl:
                 for content in soup.find_all('r Example |Examples', limit=2):
                     MediumExampleSentences.append(content.text)
 
-            NullFreeMediumExample = FetchUrl.removeEmptySpaces(MediumExampleSentences)
-            DigitFreeMediumExample = FetchUrl.removeDigits(NullFreeMediumExample)
-            PunctuationFreeMediumExample = FetchUrl.removePunctuation(DigitFreeMediumExample)
+            MediumExampledoc = [w.strip() for w in MediumExampleSentences if len(w.strip()) >= 35]
+            MediumExampleWithoutDuplicate = list(dict.fromkeys(MediumExampledoc))
+            PunctuationFreeMediumExample = FetchUrl.removePunctuation(MediumExampleWithoutDuplicate)
 
-            MediumConculsionuery = MediumDefinitionQuery + 'Conculsion'
-
-            UrlMediumConculsion = []
-            for FetchedUrl in search(MediumConculsionuery, tld='com', lang='en', stop=3, pause=2.0):
-                print(UrlMediumConculsion.append(FetchedUrl))
-
-            MediumConculsionSentences = []
-
-            for i in UrlMediumConculsion:
-
-                sauce = requests.get(i)
-                soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=3):
-                    MediumConculsionSentences.append(content.text)
-
-                ResultWithoutCertainWord = FetchUrl.removeStringWithCertainWord(MediumConculsionSentences)
-                NullFreeMediumConculsion = FetchUrl.removeEmptySpaces(ResultWithoutCertainWord)
-                DigitFreeBlankConculsion = FetchUrl.removeDigits(NullFreeMediumConculsion)
-                PunctuationFreeMediumConculsion = FetchUrl.removePunctuation(DigitFreeBlankConculsion)
-
-
-            final_result = [[PunctuationFreeMediumDefinition,ImageMediumProsCons,PunctuationFreeMediumExample,PunctuationFreeMediumDescription,PunctuationFreeMediumConculsion,UrlMediumDefinition], [MediumDefinitionQuery, MediumProsConsQuery, MediumExampleQuery]]
+            final_result = [[PunctuationFreeMediumDefinition,ImageMediumProsCons,PunctuationFreeMediumExample,PunctuationFreeMediumDescription,UrlMediumDefinition], [MediumDefinitionQuery, MediumProsConsQuery, MediumExampleQuery]]
 
         elif Template == 'Complex':
 
             ComplexDefinitionQuery = query
             UrlComplexDefinition = []
-            for FetchedUrl in search(ComplexDefinitionQuery, tld='com', lang='en', stop=3, pause=2.0):
-                UrlComplexDefinition.append(FetchedUrl)
-
             ComplexDefinitionSentences = []
             ComplexDescriptionSentences = []
+            for FetchedUrl in search(ComplexDefinitionQuery, tld='com', lang='en', stop=5, pause=2.0):
+                UrlComplexDefinition.append(FetchedUrl)
 
             for i in UrlComplexDefinition:
 
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=3):
+                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=5):
                     ComplexDefinitionSentences.append(content.text)
 
-                ResultWithoutCertainWordDefinition = FetchUrl.removeStringWithCertainWord(ComplexDefinitionSentences)
-                NullFreeComplexDefinition = FetchUrl.removeEmptySpaces(ResultWithoutCertainWordDefinition)
-                DigitFreeBlankDefinition = FetchUrl.removeDigits(NullFreeComplexDefinition)
-                PunctuationFreeComplexDefinition = FetchUrl.removePunctuation(DigitFreeBlankDefinition)
+                ComplexDefinitiondoc = [w.strip() for w in ComplexDefinitionSentences if len(w.strip()) >= 35]
+                ComplexDefinitionWithoutDuplicate = list(dict.fromkeys(ComplexDefinitiondoc))
+                ResultWithoutCertainWordDefinition = FetchUrl.removeStringWithCertainWord(ComplexDefinitionWithoutDuplicate)
+                PunctuationFreeComplexDefinition = FetchUrl.removePunctuation(ResultWithoutCertainWordDefinition)
 
             ComplexProsConsquery = ComplexDefinitionQuery + 'and what are its advantages and Disadvantages?'
 
@@ -161,10 +144,9 @@ class FetchUrl:
             headers = {'User-Agent': USER_AGENT}
             query_key = ComplexProsConsquery
             query_key = query_key.replace(' ', '+')  # replace space in query space with +
-            tgt_url = 'https://www.google.com.sg/search?q={}&tbm=isch&tbs=sbd:0'.format(
-                query_key)  # last part is the sort by relv
+            tgt_url = 'https://www.google.com.sg/search?q={}&tbm=isch&tbs=sbd:0'.format(query_key)  # last part is the sort by relv
             r = requests.get(tgt_url, headers=headers)
-            ImageComplexProsCons = [n for n in re.findall('"ou":"([a-zA-Z0-9_./:-]+.(?:jpg|jpeg|png))",', r.text)]
+            ImageComplexProsCons = [n for n in re.findall('"ou":"([a-zA-Z''0-9_./:-]+.(?:jpg|jpeg|png))",', r.text)]
 
             ComplexExamplequery = 'Given example of'+ComplexDefinitionQuery
             UrlComplexExample = []
@@ -179,12 +161,13 @@ class FetchUrl:
                 for content in soup.find_all(['p'],text=re.compile('r Example |Examples'), limit=5):
                     ComplexExampleSentences.append(content.text)
 
-            NullFreeComplexExample = FetchUrl.removeEmptySpaces(ComplexExampleSentences)
-            DigitFreeComplexExample = FetchUrl.removeDigits(NullFreeComplexExample)
-            PunctuationFreeComplexExample = FetchUrl.removePunctuation(DigitFreeComplexExample)
+            ComplexExampledoc = [w.strip() for w in ComplexExampleSentences if len(w.strip()) >= 35]
+            ComplexExampleWithoutDuplicate = list(dict.fromkeys(ComplexExampledoc))
+            PunctuationFreeComplexExample = FetchUrl.removePunctuation(ComplexExampleWithoutDuplicate)
 
+            ComplexDescriptionquery = 'Full detailed description of' + ComplexDefinitionQuery
             UrlComplexDescription = []
-            for FetchedUrl in search(ComplexDefinitionQuery, tld='com', lang='en', start=2, stop=6, pause=2.0):
+            for FetchedUrl in search(ComplexDescriptionquery, tld='com', lang='en', stop=10, pause=2.0):
                 UrlComplexDescription.append(FetchedUrl)
 
             for i in UrlComplexDescription:
@@ -194,10 +177,10 @@ class FetchUrl:
                 for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=10):
                     ComplexDescriptionSentences.append(content.text)
 
-                ResultWithoutCertainWordDescription = FetchUrl.removeStringWithCertainWord(ComplexDescriptionSentences)
-                NullFreeComplexDescription = FetchUrl.removeEmptySpaces(ResultWithoutCertainWordDescription)
-                DigitFreeBlankDescription = FetchUrl.removeDigits(NullFreeComplexDescription)
-                PunctuationFreeComplexDescription = FetchUrl.removePunctuation(DigitFreeBlankDescription)
+                ComplexDescriptiondoc = [w.strip() for w in ComplexDescriptionSentences if len(w.strip()) >= 35]
+                ComplexDescriptionWithoutDuplicate = list(dict.fromkeys(ComplexDescriptiondoc))
+                ResultWithoutCertainWordDescription = FetchUrl.removeStringWithCertainWord(ComplexDescriptionWithoutDuplicate)
+                PunctuationFreeComplexDescription = FetchUrl.removePunctuation(ResultWithoutCertainWordDescription)
 
             ComplexDiagramquery =  'diagram of'+ComplexDefinitionQuery
 
@@ -210,8 +193,9 @@ class FetchUrl:
             r = requests.get(tgt_url, headers=headers)
             ImageComplexDiagram = [n for n in re.findall('"ou":"([a-zA-Z0-9_./:-]+.(?:jpg|jpeg|png))",', r.text)]
 
+            ComplexConculsionquery = 'Conculsion of' + ComplexDefinitionQuery
             UrlComplexConculsion = []
-            for FetchedUrl in search(ComplexDefinitionQuery, tld='com', lang='en', start=3, stop=6, pause=2.0):
+            for FetchedUrl in search(ComplexConculsionquery, tld='com', lang='en', start=3, stop=6, pause=2.0):
                 UrlComplexConculsion.append(FetchedUrl)
             ComplexConculsionSentences =[]
 
@@ -222,17 +206,18 @@ class FetchUrl:
                 for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=5):
                     ComplexConculsionSentences.append(content.text)
 
-                ResultWithoutCertainWordConculsion = FetchUrl.removeStringWithCertainWord(ComplexConculsionSentences)
-                NullFreeComplexConculsion = FetchUrl.removeEmptySpaces(ResultWithoutCertainWordConculsion)
-                DigitFreeBlankConculsion = FetchUrl.removeDigits(NullFreeComplexConculsion)
-                PunctuationFreeComplexConculsion = FetchUrl.removePunctuation(DigitFreeBlankConculsion)
+                ComplexConculsiondoc = [w.strip() for w in ComplexConculsionSentences if len(w.strip()) >= 35]
+                ComplexConculsionWithoutDuplicate = list(dict.fromkeys(ComplexConculsiondoc))
+                ResultWithoutCertainWordConculsion = FetchUrl.removeStringWithCertainWord(ComplexConculsionWithoutDuplicate)
+                PunctuationFreeComplexConculsion = FetchUrl.removePunctuation(ResultWithoutCertainWordConculsion)
 
-            final_result = [[PunctuationFreeComplexDefinition,ImageComplexProsCons,PunctuationFreeComplexExample,ImageComplexDiagram,PunctuationFreeComplexDescription,PunctuationFreeComplexConculsion,UrlComplexDefinition], [ComplexDefinitionQuery,ComplexProsConsquery,ComplexExamplequery,ComplexDiagramquery]]
+            final_result = [[PunctuationFreeComplexDefinition,ImageComplexProsCons,ImageComplexDiagram,PunctuationFreeComplexExample,PunctuationFreeComplexDescription,PunctuationFreeComplexConculsion,UrlComplexDefinition], [ComplexDefinitionQuery,ComplexProsConsquery,ComplexExamplequery,ComplexDiagramquery]]
 
         else:
             BlankDefinitionquery = query
             UrlBlankDefinition = []
-            for FetchedUrl in search(BlankDefinitionquery, tld='com', lang='en', stop=1, pause=2.0):
+
+            for FetchedUrl in search(BlankDefinitionquery, tld='com', lang='en', stop=5, pause=2.0):
                 UrlBlankDefinition.append(FetchedUrl)
 
             BlankDefiitionSentences = []
@@ -240,18 +225,21 @@ class FetchUrl:
 
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p'], re.compile('r'+self.pattern, re.I)):
+                print(re.compile(self.pattern, re.I))
+                for content in soup.find_all(['p'],text=re.compile('r' + self.pattern, re.I), limit=5):
                     BlankDefiitionSentences.append(content.text)
+                # print("############")
+                # print(BlankDefiitionSentences)
 
-                ResultWithoutCertainWordDefinition = FetchUrl.removeStringWithCertainWord(BlankDefiitionSentences)
-                NullFreeBlankDefinition = FetchUrl.removeEmptySpaces(ResultWithoutCertainWordDefinition)
-                DigitFreeBlankDefinition = FetchUrl.removeDigits(NullFreeBlankDefinition)
-                PunctuationFreeBlankDefinition = FetchUrl.removePunctuation(DigitFreeBlankDefinition)
+                BlankDefinitiondoc = [w.strip() for w in BlankDefiitionSentences if len(w.strip()) >= 35]
+                BlankDescriptionWithoutDuplicate = list(dict.fromkeys(BlankDefinitiondoc))
+                ResultWithoutCertainWordBlankDefinition = FetchUrl.removeStringWithCertainWord(BlankDescriptionWithoutDuplicate)
+                PunctuationFreeBlankDefinition = FetchUrl.removePunctuation(ResultWithoutCertainWordBlankDefinition)
 
             BlankDescriptionquery = 'Full detailed description of' + BlankDefinitionquery
 
             UrlBlankDescription = []
-            for FetchedUrl in search(BlankDescriptionquery, tld='com', lang='en', stop=5, pause=2.0):
+            for FetchedUrl in search(BlankDescriptionquery, tld='com', lang='en', stop=10, pause=2.0):
                 UrlBlankDescription.append(FetchedUrl)
 
             BlankDescriptionSentences = []
@@ -259,21 +247,23 @@ class FetchUrl:
 
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=3):
+                for content in soup.find_all(['p'], text=re.compile('r' + self.pattern, re.I), limit=10):
                     BlankDescriptionSentences.append(content.text)
+                # print("****************8")
+                # print(BlankDescriptionSentences)
 
-                ResultWithoutCertainWordDescription = FetchUrl.removeStringWithCertainWord(BlankDescriptionSentences)
-                NullFreeBlankDescription = FetchUrl.removeEmptySpaces(ResultWithoutCertainWordDescription)
-                DigitFreeBlankDescription = FetchUrl.removeDigits(NullFreeBlankDescription)
-                PunctuationFreeBlankDescription = FetchUrl.removePunctuation(DigitFreeBlankDescription)
+                BlankDescriptiondoc = [w.strip() for w in BlankDescriptionSentences if len(w.strip()) >= 35]
+                BlankDefinitionWithoutDuplicate = list(dict.fromkeys( BlankDescriptiondoc))
+                ResultWithoutCertainWordDescription = FetchUrl.removeStringWithCertainWord(BlankDefinitionWithoutDuplicate)
+                PunctuationFreeBlankDescription = FetchUrl.removePunctuation(ResultWithoutCertainWordDescription)
 
-            final_result = [[PunctuationFreeBlankDefinition,PunctuationFreeBlankDescription,UrlBlankDefinition,UrlBlankDescription], [BlankDefinitionquery]]
+            final_result = [[PunctuationFreeBlankDefinition,PunctuationFreeBlankDescription,UrlBlankDescription], [BlankDefinitionquery,BlankDescriptionquery]]
 
 
         return final_result
 
 
-#a = FetchUrl('what is software testing?', 'Easy')
+#a = FetchUrl('what is database?', 'Complex')
 #a = FetchUrl('what is a bug', 'Blank')
-#print(a.fetchDataSet())
+#a.fetchDataSet()
 
