@@ -74,7 +74,7 @@ class FetchUrl:
             MediumDescriptionQuery = 'Full detailed description of'+MediumDefinitionQuery+ 'in'+course
 
             UrlMediumDescription = []
-            for FetchedUrl in search(MediumDescriptionQuery, tld='com', lang='en', start=2, stop=10, pause=2.0):  # Fetching URLS
+            for FetchedUrl in search(MediumDescriptionQuery, tld='com', lang='en', stop=10, pause=2.0):  # Fetching URLS
                 print(UrlMediumDescription.append(FetchedUrl))
 
 
@@ -110,7 +110,7 @@ class FetchUrl:
 
                 sauce = requests.get(i)
                 soup = bs.BeautifulSoup(sauce.content, 'lxml')
-                for content in soup.find_all('r Example |Examples', limit=2):
+                for content in soup.find_all('r Example |Examples', limit=5):
                     MediumExampleSentences.append(content.text)
 
             MediumExampledoc = [w.strip() for w in MediumExampleSentences if len(w.strip()) >= 35]
