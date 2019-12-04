@@ -10,9 +10,10 @@ from .ScrapingDataDummy import FetchUrl
 
 class Word2Vec:
 
-    def __init__(self, query, template):
+    def __init__(self, query, template,course):
         self.query = query
         self.template = template
+        self.course = course
 
         # model = gensim.models.KeyedVectors.load_word2vec_format(r'C:\Users\abc\Desktop\GoogleNews-vectors-negative300.bin', binary=True)
         # stopwords_path = "C:\\Users\\abc\Desktop\Backend\data\stopwords_en.txt"
@@ -21,7 +22,7 @@ class Word2Vec:
         # self.ds = DocSim(model, stopwords=stopwords)
 
     def loadFormat(self):
-        sd = FetchUrl(self.query, self.template)
+        sd = FetchUrl(self.query, self.template,self.course)
         #sd = FetchUrl('What is software testing?', 'Simple')
         data = sd.fetchDataSet()
         # print(data)

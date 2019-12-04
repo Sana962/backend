@@ -27,7 +27,7 @@ class AssignmentSimpleView(viewsets.ViewSet):
         obj = json.loads(decoded)
         #print(obj.get("query"))
         from .testimport import Word2Vec
-        test_import = Word2Vec(obj.get("query"), obj.get("template"))
+        test_import = Word2Vec(obj.get("query"), obj.get("template"), obj.get("course"))
         final_response = test_import.loadFormat()
         return Response(final_response)
         # return JsonResponse(request.body, safe=False)
